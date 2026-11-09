@@ -1,25 +1,40 @@
-# Godot 4.2+ specific ignores
-~*.dll
-
 # Godot 4+ specific ignores
 .godot/
 .nomedia
 
-# Godot-specific ignores
+# Godot 3.x / general engine ignores
 .import/
 export.cfg
 export_credentials.cfg
-*.tmp
 
-# Imported translations (automatically generated from CSV files)
+# Imported translations
 *.translation
 
-# Mono-specific ignores
+# Mono/C# specific ignores
 .mono/
 data_*/
 mono_crash.*.json
+*.csproj
+*.sln
 
-# Export outputs
+# Crash logs and temporary files
+*.tmp
+mono_crash.*.json
+
+# Build and Export outputs (Add your custom build directories if needed)
 *.exe
-# Uncomment if your project does not version PCK files as runtime dependencies.
-# *.pck
+*.pck
+*.apk
+*.aab
+*.tadir
+*.ipa
+*.app
+*.dmg
+*.js
+*.wasm
+build/
+dist/
+
+# OS-specific overrides
+.DS_Store
+Thumbs.db
