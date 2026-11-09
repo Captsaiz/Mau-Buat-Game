@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bu18txqiev3v7"]
+
+[ext_resource type="Texture2D" uid="uid://124dq0v884n8" path="res://Joko_Widodo_2019_official_portrait.jpg" id="1_bk5qv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebwwp"]
+size = Vector2(186.5, 168)
+
+[node name="jokoObj" type="Area2D" unique_id=1357847719]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1996578586]
+position = Vector2(269, 114.99997)
+scale = Vector2(0.19270833, 0.14471406)
+texture = ExtResource("1_bk5qv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=665758895]
+position = Vector2(270, 115)
+shape = SubResource("RectangleShape2D_ebwwp")
