@@ -19,33 +19,33 @@ position = Vector2(149, 114)
 script = ExtResource("1_0xm2m")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="bowoPlayer" unique_id=279274102]
+[node name="Sprite2D" type="Sprite2D" parent="bowoPlayer" unique_id=279274102 groups=["player"]]
 position = Vector2(683, 339)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_h2yge")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bowoPlayer" unique_id=1762313854]
-position = Vector2(682, 338.5)
-shape = SubResource("RectangleShape2D_ueaft")
 
 [node name="heldGodot" type="Sprite2D" parent="bowoPlayer" unique_id=1761757297]
 visible = false
 position = Vector2(801, 384)
 texture = ExtResource("3_1bvp3")
 
-[node name="jokoObj" parent="." unique_id=1357847719 instance=ExtResource("4_lquwl")]
-position = Vector2(157, 327)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bowoPlayer" unique_id=1762313854]
+position = Vector2(682, 338.5)
+shape = SubResource("RectangleShape2D_ueaft")
 
-[node name="jokoObj2" parent="." unique_id=44755297 instance=ExtResource("4_lquwl")]
-position = Vector2(-81, 430)
+[node name="jokoObj" parent="." unique_id=1357847719 groups=["jokoGrp"] instance=ExtResource("4_lquwl")]
+position = Vector2(147, 120)
 
-[node name="jokoObj3" parent="." unique_id=1475254602 instance=ExtResource("4_lquwl")]
-position = Vector2(565, 664)
+[node name="jokoObj2" parent="." unique_id=44755297 groups=["jokoGrp"] instance=ExtResource("4_lquwl")]
+position = Vector2(-179, 207)
 
-[node name="jokoObj4" parent="." unique_id=852395105 instance=ExtResource("4_lquwl")]
-position = Vector2(47, 674)
+[node name="jokoObj3" parent="." unique_id=1475254602 groups=["jokoGrp"] instance=ExtResource("4_lquwl")]
+position = Vector2(723, 42)
 
-[node name="istanaNegara" type="Area2D" parent="." unique_id=625013297]
+[node name="jokoObj4" parent="." unique_id=852395105 groups=["jokoGrp"] instance=ExtResource("4_lquwl")]
+position = Vector2(121, 448)
+
+[node name="istanaNegara" type="Area2D" parent="." unique_id=625013297 groups=["Istana"]]
 position = Vector2(4, 39)
 metadata/_edit_group_ = true
 
@@ -62,3 +62,5 @@ shape = SubResource("RectangleShape2D_ebwwp")
 [connection signal="body_entered" from="jokoObj2" to="bowoPlayer" method="_on_joko_obj_body_entered"]
 [connection signal="body_entered" from="jokoObj3" to="bowoPlayer" method="_on_joko_obj_body_entered"]
 [connection signal="body_entered" from="jokoObj4" to="bowoPlayer" method="_on_joko_obj_body_entered"]
+[connection signal="area_entered" from="istanaNegara" to="bowoPlayer" method="_on_istana_negara_area_entered"]
+[connection signal="body_entered" from="istanaNegara" to="bowoPlayer" method="_on_istana_negara_body_entered"]
